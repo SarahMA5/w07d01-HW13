@@ -1,7 +1,5 @@
-​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  ----- //
+​// ------ FOR ALL THE EXCERCISES ONLY USE ARROW FUNCTIONS  
 ​
-
-
 // PART 1:  USE MAP IN THE FOLLOWING EXCERCISES //
 
 // A) write a function called swapCase that takes a string of words and uses .map and your newly written capitalize()
@@ -47,6 +45,16 @@ var shiftLetters = function(string) {
 // - 2 of diamonds
 // - 3 of diamonds 
 
+const suits=['clubs','diamonds','spades','hearts',];
+const ranks=['ace','2','3','4','5','6','7','8','9','10','jack','queen','king'];
+var deck=[];
+suits.forEach((suit)=>ranks.forEach((rank)=>{deck.push(rank+" of "+suit);}))
+
+//Print the deck of cards
+console.log("\n Cards: ")
+deck.forEach((card=>console.log("\n"+card)));
+  
+
 
 // B) Word Play
 // Create a form where users may enter a sentence.
@@ -54,6 +62,11 @@ var shiftLetters = function(string) {
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
-
-
+var input=prompt("Enter a Sentence: ");
+extractedWords=input.split(" ");
+preferedWords=[]
+preferedWords=extractedWords.filter((word)=>word.length>=3)
+preferedWords=preferedWords.reverse()
+preferedWords=preferedWords.join(" ")
+console.log(preferedWords)
 
